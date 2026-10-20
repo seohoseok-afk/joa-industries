@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="images/logo/joa-logo.png">
+<title>PT. Joa Industries – Bag Manufacturing &amp; Sewing Services</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap">
+<style>
+:root{--canvas:#f4f4f5;--card:#fff;--fog:#ececee;--dk:#09090b;--dkcard:rgba(255,255,255,.06);--ink:#18181b;--head:#09090b;--mut:#71717a;--pebble:#d4d4d8;--ash:#a1a1aa;--graphite:#3f3f46;
+--font:"DM Sans","Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+--pillsh:inset 0 .5px 0 rgba(255,255,255,.5),inset 0 9px 14px -5px rgba(117,123,133,.4),0 0 0 1.5px #2c2e34,0 4px 6px rgba(0,0,0,.14);
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--canvas);color:var(--ink);font:400 16px/1.5 var(--font)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--canvas);z-index:20}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--canvas);z-index:21}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:18px;color:var(--head);text-decoration:none;white-space:nowrap}
+.logo img{height:36px;width:auto;display:block}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav ul a{font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;padding:8px 14px;border-radius:10000px;transition:opacity .2s}
+nav ul a:hover{opacity:.55}
+.pill{display:inline-block;font:500 14px var(--font);padding:12px 20px;border-radius:36px;background:#09090b;color:#fff;text-decoration:none;box-shadow:var(--pillsh)}
+.pill.out{background:#fff;color:var(--graphite);border:1px solid var(--graphite);box-shadow:none}
+.rbtn{display:inline-block;font:500 14px var(--font);padding:13px 18px;border-radius:16px;background:#09090b;color:#fff;border:1px solid rgba(255,255,255,.2);text-decoration:none}
+.badge{display:inline-block;font:500 12px/1.5 var(--font);padding:4px 8px;border-radius:12px;background:var(--graphite);color:#fafafa}
+.badge.ov{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+.hero{border-radius:48px;overflow:hidden;min-height:660px;padding:clamp(28px,5vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;color:#fff;background:linear-gradient(to top right,rgba(9,9,11,.84) 0%,rgba(9,9,11,.52) 45%,rgba(9,9,11,.06) 100%),url(images/hero.jpg) center/cover no-repeat}
+.hero .cols{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end;margin-top:auto}
+.hero h1{margin:0;font-size:clamp(40px,6.4vw,64px);line-height:1.04;font-weight:300}
+.hero h1 b{font-weight:700}
+.hero h1 .a{font-weight:700;color:#fff}
+.hero p{margin:0 0 20px;font-size:16px;color:#e4e4e7}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:56px 12px 0}
+.stat b{display:block;font-size:40px;line-height:1.25;font-weight:700;color:var(--head)}
+.stat span{display:block;margin-top:4px;font-size:13px;line-height:1.56;color:var(--mut)}
+section{padding-top:80px}
+.surf{background:var(--card);border-radius:36px;padding:clamp(24px,4vw,44px)}
+h2{margin:14px 0 16px;font-size:clamp(30px,4.4vw,40px);line-height:1.25;font-weight:300;color:var(--head)}
+h2 b{font-weight:700}
+.lead{margin:0 0 14px;font-size:16px;color:var(--ink);line-height:1.5}
+.sub{color:var(--mut);max-width:620px;margin:0}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.ph{aspect-ratio:4/3;border-radius:28px;border:2px dashed var(--pebble);background:var(--fog);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:13px;color:var(--mut)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.c{background:var(--card);border-radius:36px;padding:28px;display:flex;flex-direction:column;gap:10px;min-height:190px}
+.c.m{background:var(--fog);border-radius:28px;padding:24px;min-height:0}
+.c h3{margin:6px 0 0;font-size:20px;line-height:1.35;font-weight:600;color:var(--head)}
+.c p{margin:0;font-size:14px;line-height:1.56;color:var(--mut)}
+.dkp{background:var(--dk);color:#fff;border-radius:36px;padding:clamp(24px,4vw,44px)}
+.dkp h2{color:#fff}
+.dkp .sub{color:var(--ash)}
+.dstep{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;border-top:1px solid #27272a;padding:28px 0}
+.dstep:nth-of-type(even) .ph,.dstep:nth-of-type(even) .gal{order:-1}
+.dstep .ph{background:var(--dkcard);border-color:rgba(255,255,255,.22);color:var(--ash);border-radius:28px}
+.dstep h3{margin:12px 0 6px;font-size:18px;line-height:1.45;font-weight:400;color:var(--ash)}
+.dstep h3 b{font-weight:600;color:#fff}
+.dstep p{margin:0;font-size:14px;line-height:1.56;color:var(--ash)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:20px;display:block;aspect-ratio:4/3}
+.gal img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.gal img:nth-child(2):last-child{grid-column:1/-1;aspect-ratio:16/10}
+.fx{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:28px;display:block}
+.ico{display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--graphite);color:#fff;font-size:12px;font-weight:600;align-items:center;justify-content:center}
+.brands{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.lg{flex:0 0 calc(25% - 9px);height:96px;background:#fff;border-radius:28px;display:flex;align-items:center;justify-content:center;padding:16px}
+.lg img{max-width:56%;max-height:50px;object-fit:contain;display:block}
+.brands span{background:var(--fog);border-radius:28px;padding:22px 12px;text-align:center;font-weight:600;font-size:16px;color:var(--head)}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:28px}
+.info div{background:var(--dkcard);border-radius:28px;padding:20px 24px;font-size:15px;color:#fff}
+.info small{display:block;margin-bottom:4px;font-size:12px;font-weight:500;color:var(--ash)}
+.info a{color:#fff}
+.copy{margin-top:32px;font-size:13px;color:var(--ash)}
+footer{padding:20px 0 36px;text-align:center;font-size:13px;color:var(--mut)}
+.hero h1,.hero p,.hero .badge{text-shadow:0 2px 12px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.25)}
+.r{display:flex;align-items:center;gap:8px}
+.menu{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--pebble);background:var(--card);cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
+.menu span{display:block;width:16px;height:2px;border-radius:2px;background:var(--head);transition:transform .25s,opacity .25s}
+.menu.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu.open span:nth-child(2){opacity:0}
+.menu.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.drop{display:none;position:absolute;left:20px;right:20px;top:calc(100% + 4px);background:var(--card);border-radius:28px;padding:10px;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s,transform .2s,visibility .2s}
+.drop.open{opacity:1;visibility:visible;transform:none}
+.drop a{padding:14px 18px;border-radius:16px;font-size:16px;font-weight:500;color:var(--head);text-decoration:none}
+.drop a:hover{background:var(--fog)}
+@media(max-width:860px){nav ul{display:none}.menu{display:inline-flex}.drop{display:flex}.hero{min-height:560px;border-radius:36px}.hero .cols,.two,.grid3,.dstep{grid-template-columns:1fr}.dstep:nth-of-type(even) .ph,.dstep:nth-of-type(even) .gal{order:0}.stats{grid-template-columns:repeat(2,1fr)}.lg{flex-basis:calc(50% - 6px)}section{padding-top:56px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#top"><img src="images/logo/joa-logo.png" alt="">PT. Joa Industries</a>
+<ul><li><a href="#about">About</a></li><li><a href="#history">History</a></li><li><a href="#products">Products</a></li><li><a href="#process">Production</a></li><li><a href="#brands">Brands</a></li></ul>
+<div class="r"><a class="pill" href="#contact">Contact</a><button class="menu" id="mb" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</nav></div>
+<div class="drop" id="drop"><a href="#about">About</a><a href="#history">History</a><a href="#products">Products</a><a href="#process">Production</a><a href="#brands">Brands</a><a href="#contact">Contact</a></div>
+</header>
+
+<div class="wrap" id="top">
+<div class="hero">
+<div class="tags"><span class="badge ov">Est. 2013</span><span class="badge ov">Tangerang, Banten</span><span class="badge ov">80% export</span></div>
+<div class="cols">
+<h1>Quality <b>Bags</b>, Sewn with Attention to <span class="a">Detail</span>!</h1>
+<div>
+<p>A sewing service manufacturer specializing in backpacks, handbags, guitar bags, guitar hard cases and custom-designed bags for our clients.</p>
+<div class="btns"><a class="pill" href="#contact">Contact us</a><a class="pill out" href="#process">Our production</a></div>
+</div></div></div>
+<div class="stats">
+<div class="stat"><b>2013</b><span>First production</span></div>
+<div class="stat"><b>500+</b><span>Employees</span></div>
+<div class="stat"><b>16,000 m²</b><span>Land area</span></div>
+<div class="stat"><b>80%</b><span>Export share</span></div>
+</div></div>
+
+<section id="about"><div class="wrap"><div class="surf two">
+<div>
+<span class="badge">01</span>
+<h2>Built for <b>export</b>, made in <b>Tangerang</b>.</h2>
+<p class="lead">PT. Joa Industries began production on July 17, 2013, and is engaged in the sewing service industry with a focus on bag making. Our production is geared mainly toward export to various countries: 80% export and 20% local distribution.</p>
+<p class="lead">Our team of more than 400 skilled workers is dedicated to exceeding our clients’ expectations. We take bags from raw materials through cutting, sewing, embroidering and screen printing until the finished product is ready for direct delivery to customers.</p>
+</div>
+<img class="fx" src="images/factory-exterior.jpg" alt="PT. Joa Industries factory exterior" loading="lazy">
+</div></div></section>
+
+<section id="history"><div class="wrap">
+<span class="badge">02</span>
+<h2>Three names, <b>one workshop</b>.</h2>
+<p class="sub">PT. Joa Industries is the third company name in our history, established in 2013.</p>
+<div class="grid3">
+<div class="c" style="min-height:0"><span class="badge" style="align-self:flex-start">2001 – 2005</span><h3>CV. Eka Tunggal Esa</h3></div>
+<div class="c" style="min-height:0"><span class="badge" style="align-self:flex-start">2005 – 2013</span><h3>PT. Abdi Single Son</h3></div>
+<div class="c" style="min-height:0"><span class="badge" style="align-self:flex-start">2013 – present</span><h3>PT. Joa Industries</h3></div>
+</div></div></section>
+
+<section id="products"><div class="wrap">
+<span class="badge">03</span>
+<h2>Every bag, finished with <b>care</b>.</h2>
+<p class="sub">We always try to meet our clients’ expectations by giving extra attention to the quality details of every bag.</p>
+<div class="grid3">
+<div class="c"><h3>Day-to-day backpacks</h3><p>Everyday backpacks built for comfort and durability.</p></div>
+<div class="c"><h3>Handbags</h3><p>Carefully finished handbags with consistent stitching quality.</p></div>
+<div class="c"><h3>Guitar bags</h3><p>Padded gig bags for acoustic and electric guitars.</p></div>
+<div class="c"><h3>Guitar hard cases</h3><p>Protective hard cases for demanding transport.</p></div>
+<div class="c"><h3>Custom-designed bags</h3><p>Bags produced directly to our clients’ own designs.</p></div>
+</div></div></section>
+
+<section id="process"><div class="wrap"><div class="dkp">
+<span class="badge ov">04</span>
+<h2>Raw material to <b>finished bag</b>, under one roof.</h2>
+<p class="sub">A 16,000 m² site with a 4,000 m² building area, covering every stage of production in-house.</p>
+<div style="margin-top:28px">
+<div class="dstep"><div><span class="ico">1</span><h3>Forget outsourcing: <b>Cutting Section</b></h3><p>Raw materials are precisely cut with industrial cutting machines, ready for the production line.</p></div><div class="gal"><img src="images/production/cutting01.jpg" alt="Cutting section 1" loading="lazy"><img src="images/production/cutting02.jpg" alt="Cutting section 2" loading="lazy"><img src="images/production/cutting03.jpg" alt="Cutting section 3" loading="lazy"></div></div>
+<div class="dstep"><div><span class="ico">2</span><h3>All in-house: <b>Screen Printing &amp; Webbing</b></h3><p>In-house screen printing and webbing production for logos, straps and fittings.</p></div><div class="gal"><img src="images/production/screen01.jpg" alt="Screen printing and webbing section 1" loading="lazy"><img src="images/production/screen02.jpg" alt="Screen printing and webbing section 2" loading="lazy"><img src="images/production/screen03.jpg" alt="Screen printing and webbing section 3" loading="lazy"></div></div>
+<div class="dstep"><div><span class="ico">3</span><h3>Clean and consistent: <b>Embroidery Section</b></h3><p>Multi-head embroidery machines deliver clean, consistent brand embroidery.</p></div><div class="gal"><img src="images/production/embroidery01.jpg" alt="Embroidery section 1" loading="lazy"><img src="images/production/embroidery02.jpg" alt="Embroidery section 2" loading="lazy"></div></div>
+<div class="dstep"><div><span class="ico">4</span><h3>Attention to detail: <b>Sewing Section</b></h3><p>Hundreds of skilled operators assemble each bag with careful attention to detail and quality.</p></div><div class="gal"><img src="images/production/sewing00.jpg" alt="Sewing section 1" loading="lazy"><img src="images/production/sewing01.jpg" alt="Sewing section 2" loading="lazy"><img src="images/production/sewing02.jpg" alt="Sewing section 3" loading="lazy"></div></div>
+<div class="dstep"><div><span class="ico">5</span><h3>Ready for delivery: <b>Storage Section</b></h3><p>Organized warehousing for fabrics, materials and finished goods, ready for delivery.</p></div><div class="gal"><img src="images/production/store01.jpg" alt="Storage section 1" loading="lazy"><img src="images/production/store02.jpg" alt="Storage section 2" loading="lazy"><img src="images/production/store03.jpg" alt="Storage section 3" loading="lazy"></div></div>
+</div></div></div></section>
+
+<section id="brands"><div class="wrap">
+<span class="badge">05</span>
+<h2>Trusted by <b>international</b> brands.</h2>
+<p class="sub">We are proud to produce for well-known international brands.</p>
+<div class="brands"><div class="lg"><img src="images/brands/eiger.png" alt="Eiger logo"></div><div class="lg"><img src="images/brands/yamaha.png" alt="Yamaha logo"></div><div class="lg"><img src="images/brands/converse.png" alt="Converse logo"></div><div class="lg"><img src="images/brands/ovation.png" alt="Ovation logo"></div><div class="lg"><img src="images/brands/fender.png" alt="Fender logo"></div><div class="lg"><img src="images/brands/eider.png" alt="Eider logo"></div><div class="lg"><img src="images/brands/cort.png" alt="Cort logo"></div><div class="lg"><img src="images/brands/the-north-face.png" alt="The North Face logo"></div><div class="lg"><img src="images/brands/esp.png" alt="ESP logo"></div><div class="lg"><img src="images/brands/dean-guitars.png" alt="Dean Guitars logo"></div><div class="lg"><img src="images/brands/faith.png" alt="Faith logo"></div><div class="lg"><img src="images/brands/sire.png" alt="Sire logo"></div><div class="lg"><img src="images/brands/k2.png" alt="K2 logo"></div></div></div></section>
+
+
+<section id="contact"><div class="wrap"><div class="dkp">
+<span class="badge ov">06</span>
+<h2>Company <b>information</b>.</h2>
+<div class="btns" style="margin-top:8px"><a class="rbtn" href="mailto:joa.industries9@gmail.com">Email us</a><a class="rbtn" href="tel:+622129419165">Call</a></div>
+<div class="info">
+<div><small>Company</small>PT. Joa Industries</div>
+<div><small>President Director</small>Won Young Nam</div>
+<div><small>Mobile</small>0811 304 360</div>
+<div><small>Phone</small>(021) 29419165 / 66</div>
+<div><small>Fax</small>(021) 29419161</div>
+<div><small>Email</small><a href="mailto:joa.industries9@gmail.com">joa.industries9@gmail.com</a></div>
+<div><small>Website</small><a href="https://www.joa-industries.com" target="_blank" rel="noopener">www.joa-industries.com</a></div>
+<div><small>Address</small>Desa Pasir Barat RT. 06/RW. 04, Jambe, Tangerang, Banten, Indonesia</div>
+</div></div></div></section>
+
+<footer>© 2026 PT. Joa Industries. All rights reserved.</footer>
+<script>
+(function(){var b=document.getElementById('mb'),d=document.getElementById('drop');if(!b||!d)return;
+function t(o){b.classList.toggle('open',o);d.classList.toggle('open',o);b.setAttribute('aria-expanded',o)}
+b.addEventListener('click',function(){t(!d.classList.contains('open'))});
+d.addEventListener('click',function(e){if(e.target.tagName==='A')t(false)});
+window.addEventListener('resize',function(){if(window.innerWidth>860)t(false)});
+})();
+</script>
+</body>
+</html>
